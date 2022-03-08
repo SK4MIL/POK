@@ -1,4 +1,4 @@
-function GaussianElimination(A, B)
+function gaussianElimination(A, B)
    AB = [A, B];
    [r, c] = size(AB);
 

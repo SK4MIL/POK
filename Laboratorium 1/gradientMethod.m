@@ -16,6 +16,6 @@
 function result = gradientMethod(A, B, x0, TolX, TolFun)
     fun = @(x) mean(abs(A*[x(1); x(2); x(3); x(4)] - B));
     options = optimset('TolX', TolX, 'TolFun', TolFun);
-    [x, fval, exitflag, output] = fminunc(fun, x0, options);
+    [x, fval, exitflag, output] = fminunc(fun, x0, options)
     result = x;
 end
