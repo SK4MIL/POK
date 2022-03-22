@@ -5,9 +5,11 @@ format long;
 f1 = @(x) x + log10(x) - sin(x).^2;
 f2 = @(x) x.^2 + log10(x) - sin(x);
 
-iter = 10;
+iter = 5;
 
 %% Sieczne
+sieczne(f1, 1, 4, iter);
+sieczne(f2, 1, 4, iter);
 
 %% Regula Falsi
 root = regula_falsi(f1, 1, 4, iter);
