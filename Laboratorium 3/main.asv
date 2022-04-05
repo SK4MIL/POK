@@ -1,0 +1,6 @@
+close all;
+clear; 
+
+%Interpolacja 
+a=[];
+a = [a wynik] 
