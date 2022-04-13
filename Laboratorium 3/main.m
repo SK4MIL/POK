@@ -53,6 +53,7 @@ figure(1);
 plot(t, f(t), '--b',  X, Y, '.r', 'MarkerSize', 12);
 hold on;
 plot( 21, f(21), '.b', 'MarkerSize', 20);
-text(21,f(21),'    \leftarrow f(21) = ');
-legend(["Wielomian", "Punkty", "Zadane X = 21"], 'location', 'southwest');
+value = f(21);
+text(21,f(21),sprintf('    f(21) = %.6f', value));
+legend(["Wielomian", "Punkty", "Zadane x = 21"], 'location', 'southwest');
 
