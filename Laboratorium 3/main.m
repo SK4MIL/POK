@@ -1,3 +1,5 @@
+
+
 close all;
 clear;
 
@@ -6,6 +8,8 @@ Y = [0.98, 0.93, 0.86, .76, .64];
 a = zeros(1,length(X));
 w = zeros(length(X)-1);
 
+xx = 0:0.5:60;
+yy=spline(X,Y,xx);
 
 for i = 1:length(X)
     mian = 1;
@@ -48,6 +52,7 @@ t = 0:60;
 figure(1);
 plot(f(t));
 hold on;
+plot(xx,yy, 'black--')
 plot(X,Y, '*r');
-legend(["Wielomian", "Punkty"]);
+legend(["Wielomian","Spline", "Punkty"]);
 
