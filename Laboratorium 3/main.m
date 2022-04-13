@@ -51,14 +51,11 @@ f = @(x) ...
 figure(1);
 hold on;
 plot(xx,f(xx),xx,yy, 'black--',X, Y,'.r')
-%plot(X,Y, '*r');
 plot( 21, f(21), '.b', 'MarkerSize', 20);
-text(21,f(21),'    \leftarrow f(21) = ');
-legend(["Wielomian","Spline", "Punkty","Zadane X = 21"]);
-% figure(1);
-% plot(xx, f(xx), '--b',  X, Y, '.r', 'MarkerSize', 12);
-% hold on;
-% plot( 21, f(21), '.b', 'MarkerSize', 20);
-% text(21,f(21),'    \leftarrow f(21) = ');
-% legend(["Wielomian", "Punkty", "Zadane X = 21"], 'location', 'southwest');
+text(21,(0.96),sprintf(' polynomial = %.3f \n spline = %.3f', f(21), yy(21)));
+title ("Wykres przedstawiający wyniki obu metod interpolacji:")
+xlabel ("x")
+ylabel ("y")
+legend(["Wielomian","Spline", "Punkty", "Zadane x = 21"], 'location', 'southwest');
+
 
