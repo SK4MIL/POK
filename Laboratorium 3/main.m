@@ -57,5 +57,6 @@ title ("Wykres przedstawiający wyniki obu metod interpolacji:")
 xlabel ("x")
 ylabel ("y")
 legend(["Wielomian","Spline", "Punkty", "Zadane x = 21"], 'location', 'southwest');
+sprintf("Values interpolated for X = 21:\nPolynomial method = %.3f \nSpline method = %.3f", f(21), yy(21))
 
 
