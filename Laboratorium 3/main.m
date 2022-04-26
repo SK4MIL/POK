@@ -3,12 +3,12 @@
 close all;
 clear;
 
-X = [  10,   20,   30,  40,  50];
-Y = [0.98, 0.93, 0.86, .76, .64];
+X = [ 3,   3.8,   4.3,  4.7,  5.0];
+Y = [0.1411, -0.6119, -0.9162, -0.9999, -0.9589];
 a = zeros(1,length(X));
 w = zeros(length(X)-1);
 
-xx = 0:1:60;
+xx = 2.5:0.5:6;
 yy=spline(X,Y,xx);
 
 for i = 1:length(X)
@@ -51,8 +51,8 @@ f = @(x) ...
 figure(1);
 hold on;
 plot(xx,f(xx),xx,yy, 'black--',X, Y,'.r')
-plot( 21, f(21), '.b', 'MarkerSize', 20);
-text(21,(0.96),sprintf(' polynomial = %.3f \n spline = %.3f', f(21), yy(21)));
+%plot( 21, f(21), '.b', 'MarkerSize', 20);
+%text(21,(0.96),sprintf(' polynomial = %.3f \n spline = %.3f', f(21), yy(21)));
 title ("Wykres przedstawiający wyniki obu metod interpolacji:")
 xlabel ("x")
 ylabel ("y")
